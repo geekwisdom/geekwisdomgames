@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Welcome to Geek Wisdom. If you are reading this, then welcome to the club ! -->
+<title>Geek Wisdom - Don't Poke the...</title>
+<!-- RSS Feed -->
+<link rel="alternate" type="application/rss+xml" title="Geek Wisdom - RSS" href="https://geekwizdom.blogspot.com/feeds/posts/default?alt=rss" />
+<!-- Standard Meta data -->
+<script src="insultengine.js"></script>
+<meta name="Author" CONTENT="Brad Detchevery">
+<meta name="Publisher" CONTENT="Brad Detchevery">
+<meta name="Content-Language" CONTENT="en-US">
+<meta name="description" content="Don't Poke the..Only one rule. How far can you get?">
+<script src="dontpoke.js"></script>
+
+<!-- Open Graph metadata -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Geek Wisdom" />
+<meta property="og:title" content="Geek Wisdom - Leaderboard" />
+<meta property="og:url" content="http://geekwisdom.org/dontpoke.html" />
+<meta property="og:description" content="Don't Poke the...." />
+<meta property="og:image" content="http://geekwisdom.org/styles/gwlogosmall.png" />
+
+<!-- Twitter metadata -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@TrueGeekWisdom">
+<meta name="twitter:title" content="Geek Wisdom">
+<meta name="twitter:description" content="Geek Wisdom - Leaderboard">
+
+
+<link rel="stylesheet" type="text/css" href="./styles/games.css">
+<link rel="stylesheet" type="text/css" href="./styles/blogstyle.css">
+
+</head>
+<body>
+<h1 id="title">DON'T POKE THE BEAR!</h1>
+<div id="gameboard"></div>
+<table style="text-align:center;margin:0 auto;border-radius:5px;color:red;width:50%;font-size:200%;">
+<tr>
+<td>
+<img id="devil" src="devil.png" style="visibility:hidden;">
+</td>
+<td>
+<div id="msg" ></div>
+</td>
+<td>
+<img id="angel" src="angel.png" style="visibility:hidden;">
+</td>
+</tr>
+</table>
+<footer style="text-align: center;">
+<!-- <iframe height="140" width="960" frameborder=0 src="/banner/" style="overflow:hidden"></iframe> -->
+</footer>
+</body>
+<script type="text/javascript" src="dontpoke.js">
+</script>
+<script>
+var glevel=1;
+if (typeof(window.localStorage) !== "undefined") 
+     {
+    glevel=window.localStorage.getItem("pokeround");
+    if (glevel == null) glevel=1;
+    }  
+game=document.getElementById("gameboard");
+startgame(game,glevel);
+</script>
+</html>
